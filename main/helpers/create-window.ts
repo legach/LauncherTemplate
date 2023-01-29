@@ -14,7 +14,7 @@ export default (windowName: string, options: BrowserWindowConstructorOptions): B
     height: options.height,
   };
   let state = {};
-  let win;
+  let win: BrowserWindow;
 
   const restore = () => store.get(key, defaultSize);
 
@@ -29,7 +29,7 @@ export default (windowName: string, options: BrowserWindowConstructorOptions): B
     };
   };
 
-  const windowWithinBounds = (windowState, bounds) => {
+  const windowWithinBounds = (windowState: any, bounds: any) => {
     return (
       windowState.x >= bounds.x &&
       windowState.y >= bounds.y &&
@@ -41,12 +41,12 @@ export default (windowName: string, options: BrowserWindowConstructorOptions): B
   const resetToDefaults = () => {
     const bounds = screen.getPrimaryDisplay().bounds;
     return Object.assign({}, defaultSize, {
-      x: (bounds.width - defaultSize.width) / 2,
-      y: (bounds.height - defaultSize.height) / 2,
+      x: (bounds.width - (defaultSize.width ?? 0)) / 2,
+      y: (bounds.height - (defaultSize.height ?? 0)) / 2,
     });
   };
 
-  const ensureVisibleOnSomeDisplay = windowState => {
+  const ensureVisibleOnSomeDisplay = (windowState: any) => {
     const visible = screen.getAllDisplays().some(display => {
       return windowWithinBounds(windowState, display.bounds);
     });

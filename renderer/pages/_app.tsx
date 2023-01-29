@@ -1,10 +1,19 @@
-import React from 'react';
-import type { AppProps } from 'next/app';
+import React from 'react'
 
-import '../styles/globals.css';
+import './style.css'
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+import type { AppProps } from 'next/app'
+import Analytics from 'src/components/Analytics/Analytics'
+
+
+const Application = ({ Component, pageProps }: AppProps) => {
+  return (
+    <React.Fragment>
+      <Analytics />
+      
+      <Component {...pageProps} />
+    </React.Fragment>
+  )
 }
 
-export default MyApp
+export default Application

@@ -1,0 +1,39 @@
+html, body, #__next {
+    height: 100%;
+}
+
+#__next {
+    display: flex;
+}
+
+#frame {
+    padding-top: 5px;
+}
+
+.dragbar {
+    -webkit-app-region: drag;
+    -webkit-user-select: none;
+    height: 30px;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+    /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: #121212;
+    /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05));
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 3px solid #121212;
+    /* creates padding around scroll thumb */
+}

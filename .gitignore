@@ -3,3 +3,7 @@ node_modules
 .next
 app
 dist
+.vscode
+.idea
+package-lock.json
+yarn.lock

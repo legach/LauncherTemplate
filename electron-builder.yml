@@ -1,6 +1,7 @@
-appId: com.example.nextron
-productName: Launcher template
-copyright: Copyright © 2022 Oleg Sidorenko
+appId: com.electron.applauncher
+productName: AppLauncher
+copyright: Copyright © 2022 AppLauncher
+buildVersion: 1.0.0
 directories:
   output: dist
   buildResources: resources
@@ -9,4 +10,18 @@ files:
     filter:
       - package.json
       - app
-publish: null
+publish:
+  - provider: generic
+    url: <domain>/launcher/latest.yml
+nsis:
+  artifactName: ${productName}Setup.${ext}
+  perMachine: false
+  allowElevation: true
+  allowToChangeInstallationDirectory: true
+  runAfterFinish: true
+  createDesktopShortcut: true
+  oneClick: false
+  shortcutName: ${productName}
+win:
+  target: nsis
+  requestedExecutionLevel: asInvoker 

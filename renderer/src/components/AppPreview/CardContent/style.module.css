@@ -1,0 +1,8 @@
+.Tags_Box::-webkit-scrollbar {
+    display: none;
+}
+
+.Tags_Box {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}

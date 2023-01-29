@@ -1,30 +1,16 @@
-<p align="center"><img src="https://i.imgur.com/a9QWW0v.png"></p>
+## What is it
+Not ready to use template for download and launch application from `renderer\public\data\applications.json`
 
-## Usage
-
-### Create an App
-
-```
-# with npx
-$ npx create-nextron-app my-app --example with-typescript-tailwindcss
-
-# with yarn
-$ yarn create nextron-app my-app --example with-typescript-tailwindcss
-
-# with pnpx
-$ pnpx create-nextron-app my-app --example with-typescript-tailwindcss
-```
+Please fill next gap:
+* `<sha512>`
+* `<domain>`
+* `<SiteDomain>`
 
 ### Install Dependencies
 
 ```
-$ cd my-app
-
 # using yarn or npm
 $ yarn (or `npm install`)
-
-# using pnpm
-$ pnpm install --shamefully-hoist
 ```
 
 ### Use it
